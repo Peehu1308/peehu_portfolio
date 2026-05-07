@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Section } from "./Section";
-import { Mail, Send, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Send, Github, Linkedin, Phone } from "lucide-react";
 import { FormEvent, useState } from "react";
 
 export function Contact() {
@@ -56,34 +56,20 @@ export function Contact() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="space-y-4"
         >
-          <a href="mailto:peehu@example.com" className="flex items-center gap-4 rounded-2xl glass p-5 neon-border glow-hover">
-            <div className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-primary to-accent text-primary-foreground"><Mail className="h-5 w-5" /></div>
-            <div>
-              <div className="text-xs uppercase tracking-wider text-muted-foreground">Email</div>
-              <div className="font-mono text-sm">peehu@example.com</div>
-            </div>
-          </a>
-          <a href="https://github.com/Peehu1308" target="_blank" rel="noreferrer" className="flex items-center gap-4 rounded-2xl glass p-5 neon-border glow-hover">
-            <div className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-primary to-accent text-primary-foreground"><Github className="h-5 w-5" /></div>
-            <div>
-              <div className="text-xs uppercase tracking-wider text-muted-foreground">GitHub</div>
-              <div className="font-mono text-sm">@Peehu1308</div>
-            </div>
-          </a>
-          <a href="#" className="flex items-center gap-4 rounded-2xl glass p-5 neon-border glow-hover">
-            <div className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-primary to-accent text-primary-foreground"><Linkedin className="h-5 w-5" /></div>
-            <div>
-              <div className="text-xs uppercase tracking-wider text-muted-foreground">LinkedIn</div>
-              <div className="font-mono text-sm">Peehu Mishra</div>
-            </div>
-          </a>
-          <a href="#" className="flex items-center gap-4 rounded-2xl glass p-5 neon-border glow-hover">
-            <div className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-primary to-accent text-primary-foreground"><Twitter className="h-5 w-5" /></div>
-            <div>
-              <div className="text-xs uppercase tracking-wider text-muted-foreground">Twitter / X</div>
-              <div className="font-mono text-sm">@peehu</div>
-            </div>
-          </a>
+          {[
+            { i: Mail, l: "Email", v: "mpeehu3@gmail.com", h: "mailto:mpeehu3@gmail.com" },
+            { i: Phone, l: "Phone", v: "+91 98912 90899", h: "tel:+919891290899" },
+            { i: Github, l: "GitHub", v: "@Peehu1308", h: "https://github.com/Peehu1308" },
+            { i: Linkedin, l: "LinkedIn", v: "peehu-mishra", h: "https://www.linkedin.com/in/peehu-mishra/" },
+          ].map(c => (
+            <a key={c.l} href={c.h} target="_blank" rel="noreferrer" className="flex items-center gap-4 rounded-2xl glass p-5 neon-border glow-hover">
+              <div className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-primary to-accent text-primary-foreground"><c.i className="h-5 w-5" /></div>
+              <div>
+                <div className="text-xs uppercase tracking-wider text-muted-foreground">{c.l}</div>
+                <div className="font-mono text-sm">{c.v}</div>
+              </div>
+            </a>
+          ))}
         </motion.div>
       </div>
     </Section>
