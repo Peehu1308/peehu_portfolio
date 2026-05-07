@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Heart } from "lucide-react";
+import { Github, Linkedin, Mail, Heart } from "lucide-react";
 
 export function Footer() {
   return (
@@ -10,8 +10,8 @@ export function Footer() {
         <div className="flex items-center gap-3">
           {[
             { i: Github, h: "https://github.com/Peehu1308" },
-            { i: Linkedin, h: "#" },
-            { i: Twitter, h: "#" },
+            { i: Linkedin, h: "https://www.linkedin.com/in/peehu-mishra/" },
+            { i: Mail, h: "mailto:mpeehu3@gmail.com" },
           ].map((s, i) => (
             <a key={i} href={s.h} target="_blank" rel="noreferrer" className="grid h-9 w-9 place-items-center rounded-full glass transition hover:bg-primary/20 hover:text-primary glow-hover">
               <s.i className="h-4 w-4" />
