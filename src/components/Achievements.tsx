@@ -27,6 +27,24 @@ const highlights = [
     sub: "NASA Space Apps Hackathon — Regional Round",
     text: "Selected among the top finalists for innovative space-tech solutions.",
   },
+  {
+    icon: Award,
+    title: "Tech Head — Mobilon Club",
+    sub: "Bennett University",
+    text: "Led the tech wing of Mobilon, mentoring members and driving hands-on mobile & web development initiatives.",
+  },
+  {
+    icon: Trophy,
+    title: "SHIFI Scholarship Holder",
+    sub: "Merit-based Scholarship",
+    text: "Awarded the SHIFI scholarship for academic excellence and consistent performance.",
+  },
+  {
+    icon: Award,
+    title: "CSA Certified",
+    sub: "Certified Security Associate",
+    text: "Certified in core security principles, secure development practices and threat awareness.",
+  },
 ];
 
 const more = [

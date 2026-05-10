@@ -4,10 +4,23 @@ import { Briefcase } from "lucide-react";
 
 const jobs = [
   {
+    role: "Frontend Intern",
+    company: "Home First Finance Company",
+    location: "Mumbai",
+    period: "Mar 2026 — Present",
+    bullets: [
+      "Engineered a high-performance internal broadcast system with React.js & Next.js for real-time org-wide communication.",
+      "Designed a modular component architecture with Tailwind CSS, improving UI consistency and dev velocity.",
+      "Implemented efficient API integration & state management, optimizing data flow and reducing latency.",
+      "Improved performance via code-splitting, lazy loading and rendering optimizations across devices.",
+      "Collaborated in Agile sprints to ship production-grade features.",
+    ],
+  },
+  {
     role: "Software Developer",
     company: "Voxvertex",
     location: "Remote",
-    period: "Present",
+    period: "September 2025 — February 2026",
     bullets: [
       "Built scalable full-stack features using MERN, Next.js and React.js, ensuring high performance and reliability.",
       "Designed responsive, intuitive UIs with Tailwind CSS, improving accessibility and user engagement.",
@@ -16,17 +29,16 @@ const jobs = [
       "Collaborated cross-functionally to ship user-centered products, improving dev efficiency by ~20%.",
     ],
   },
+  
   {
-    role: "Frontend Intern",
-    company: "Home First Finance Company",
-    location: "Mumbai",
-    period: "Internship",
+    role: "Research Intern",
+    company: "Independent Research",
+    location: "Remote",
+    period: "Summer 2024",
     bullets: [
-      "Engineered a high-performance internal broadcast system with React.js & Next.js for real-time org-wide communication.",
-      "Designed a modular component architecture with Tailwind CSS, improving UI consistency and dev velocity.",
-      "Implemented efficient API integration & state management, optimizing data flow and reducing latency.",
-      "Improved performance via code-splitting, lazy loading and rendering optimizations across devices.",
-      "Collaborated in Agile sprints to ship production-grade features.",
+      "Conducted research on data-driven cybercrime awareness & mitigation, contributing to a Springer-published paper (DACS 2024, IIM Bodh Gaya).",
+      "Worked on AI/ML experimentation, dataset analysis and model evaluation.",
+      "Authored technical write-ups, literature reviews and reproducible research notebooks.",
     ],
   },
 ];

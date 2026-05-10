@@ -1,11 +1,11 @@
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Mail, Heart, Coffee } from "lucide-react";
 
 export function Footer() {
   return (
     <footer className="relative border-t border-border/50 px-4 py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 md:flex-row">
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          Built with <Heart className="h-3.5 w-3.5 fill-primary text-primary" /> by <span className="text-gradient font-semibold">Peehu Mishra</span>
+          Crafted with <Coffee className="h-3.5 w-3.5 text-primary" /> by <span className="text-gradient font-semibold">Peehu Mishra</span>
         </div>
         <div className="flex items-center gap-3">
           {[

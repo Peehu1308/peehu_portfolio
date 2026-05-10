@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 export function Loader() {
   const [show, setShow] = useState(true);
   useEffect(() => {
-    const t = setTimeout(() => setShow(false), 1100);
+    const t = setTimeout(() => setShow(false), 10);
     return () => clearTimeout(t);
   }, []);
   return (

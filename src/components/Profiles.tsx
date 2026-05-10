@@ -4,11 +4,11 @@ import { Section } from "./Section";
 import { Github, Code, Trophy, Linkedin, Award } from "lucide-react";
 
 const profiles = [
-  { name: "GitHub", username: "@Peehu1308", stat: 120, label: "Contributions", icon: Github, url: "https://github.com/Peehu1308" },
+  { name: "GitHub", username: "@Peehu1308", stat: 1600, label: "Contributions", icon: Github, url: "https://github.com/Peehu1308" },
   { name: "LeetCode", username: "@peehu", stat: 250, label: "Problems Solved", icon: Code, url: "#" },
-  { name: "Codeforces", username: "@peehu", stat: 1400, label: "Rating", icon: Trophy, url: "#" },
-  { name: "LinkedIn", username: "Peehu Mishra", stat: 2000, label: "Network", icon: Linkedin, url: "#" },
-  { name: "HackerRank", username: "@peehu", stat: 5, label: "Stars", icon: Award, url: "#" },
+ 
+  { name: "LinkedIn", username: "Peehu Mishra", stat: 950, label: "Network", icon: Linkedin, url: "#" },
+
 ];
 
 function Counter({ to }: { to: number }) {

@@ -1,74 +1,136 @@
 import { motion } from "framer-motion";
+import { ArrowUpRight, ExternalLink, Github, Linkedin, Mail } from "lucide-react";
 import { Section } from "./Section";
-import { Mail, Send, Github, Linkedin, Phone } from "lucide-react";
-import { FormEvent, useState } from "react";
+
+const socials = [
+  {
+    icon: Mail,
+    label: "Email",
+    value: "mpeehu3@gmail.com",
+    href: "mailto:mpeehu3@gmail.com",
+    description: "Best for formal inquiries",
+  },
+  {
+    icon: Github,
+    label: "GitHub",
+    value: "@Peehu1308",
+    href: "https://github.com/Peehu1308",
+    description: "Check out my projects & contributions",
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    value: "peehu-mishra",
+    href: "https://www.linkedin.com/in/peehu-mishra/",
+    description: "Let's connect professionally",
+  },
+];
+
+const availability = [
+  { label: "Internships", available: true },
+  { label: "Freelance", available: true },
+  { label: "Research Collabs", available: true },
+  { label: "Full-time", available: true },
+];
 
 export function Contact() {
-  const [sent, setSent] = useState(false);
-
-  const onSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 3000);
-  };
-
   return (
-    <Section id="contact" eyebrow="Contact" title="Let's build something" subtitle="Open to collaborations, research, internships and freelance work.">
-      <div className="grid gap-8 md:grid-cols-2">
-        <motion.form
+    <Section
+      id="contact"
+      eyebrow="Contact"
+      title="Let's build something"
+      subtitle="Open to collaborations, research, internships and freelance work. Always happy to connect."
+    >
+      <div className="grid gap-8 lg:grid-cols-5">
+        {/* Left — availability + CTA */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          onSubmit={onSubmit}
-          className="space-y-4 rounded-2xl glass p-6 neon-border"
+          className="lg:col-span-2 flex flex-col gap-6"
         >
-          {(["Name", "Email"] as const).map(f => (
-            <div key={f}>
-              <label className="mb-1.5 block font-mono text-xs uppercase tracking-wider text-muted-foreground">{f}</label>
-              <input
-                required
-                type={f === "Email" ? "email" : "text"}
-                className="w-full rounded-lg border border-border bg-input/50 px-4 py-2.5 text-sm outline-none transition focus:border-primary focus:shadow-[0_0_0_3px_oklch(0.65_0.28_305_/_0.2)]"
-              />
+          {/* Status card */}
+          <div className="rounded-2xl glass neon-border p-6 relative overflow-hidden">
+            <div className="absolute -left-10 -top-10 h-36 w-36 rounded-full bg-primary/10 blur-3xl pointer-events-none" />
+            <div className="flex items-center gap-2 mb-4">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400" />
+              </span>
+              <span className="text-xs font-mono uppercase tracking-widest text-muted-foreground">
+                Available for work
+              </span>
             </div>
-          ))}
-          <div>
-            <label className="mb-1.5 block font-mono text-xs uppercase tracking-wider text-muted-foreground">Message</label>
-            <textarea
-              required
-              rows={5}
-              className="w-full resize-none rounded-lg border border-border bg-input/50 px-4 py-2.5 text-sm outline-none transition focus:border-primary focus:shadow-[0_0_0_3px_oklch(0.65_0.28_305_/_0.2)]"
-            />
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              I'm currently open to new opportunities. Whether it's a quick chat or a big idea —{" "}
+              <span className="text-primary font-medium">my inbox is always open.</span>
+            </p>
           </div>
-          <button
-            type="submit"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-primary to-accent px-5 py-3 text-sm font-semibold text-primary-foreground glow-hover"
-          >
-            {sent ? "Message sent ✨" : (<><Send className="h-4 w-4" /> Send Message</>)}
-          </button>
-        </motion.form>
 
+          {/* Availability tags */}
+          <div className="rounded-2xl glass neon-border p-6">
+            <p className="mb-4 text-xs font-mono uppercase tracking-widest text-muted-foreground">
+              Open to
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {availability.map(({ label, available }) => (
+                <span
+                  key={label}
+                  className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium border transition-colors ${
+                    available
+                      ? "bg-primary/10 border-primary/30 text-primary"
+                      : "bg-muted/30 border-border text-muted-foreground line-through"
+                  }`}
+                >
+                  {available && <span className="h-1.5 w-1.5 rounded-full bg-primary" />}
+                  {label}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick email CTA */}
+          <a
+            href="mailto:mpeehu3@gmail.com"
+            className="inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-primary to-accent px-5 py-4 text-sm font-semibold text-primary-foreground glow-hover transition-all hover:scale-[1.02]"
+          >
+            Say hello <ArrowUpRight className="h-4 w-4" />
+          </a>
+        </motion.div>
+
+        {/* Right — social links */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="space-y-4"
+          className="lg:col-span-3 flex flex-col gap-4"
         >
-          {[
-            { i: Mail, l: "Email", v: "mpeehu3@gmail.com", h: "mailto:mpeehu3@gmail.com" },
-            { i: Phone, l: "Phone", v: "+91 98912 90899", h: "tel:+919891290899" },
-            { i: Github, l: "GitHub", v: "@Peehu1308", h: "https://github.com/Peehu1308" },
-            { i: Linkedin, l: "LinkedIn", v: "peehu-mishra", h: "https://www.linkedin.com/in/peehu-mishra/" },
-          ].map(c => (
-            <a key={c.l} href={c.h} target="_blank" rel="noreferrer" className="flex items-center gap-4 rounded-2xl glass p-5 neon-border glow-hover">
-              <div className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-primary to-accent text-primary-foreground"><c.i className="h-5 w-5" /></div>
-              <div>
-                <div className="text-xs uppercase tracking-wider text-muted-foreground">{c.l}</div>
-                <div className="font-mono text-sm">{c.v}</div>
+          {socials.map((c, i) => (
+            <motion.a
+              key={c.label}
+              href={c.href}
+              target="_blank"
+              rel="noreferrer"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
+              className="group flex items-center gap-5 rounded-2xl glass p-5 neon-border glow-hover transition-all hover:scale-[1.01]"
+            >
+              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-primary to-accent text-primary-foreground shadow-lg">
+                <c.icon className="h-6 w-6" />
               </div>
-            </a>
+              <div className="flex-1 min-w-0">
+                <div className="text-xs uppercase tracking-widest text-muted-foreground font-mono">
+                  {c.label}
+                </div>
+                <div className="font-mono text-sm font-medium mt-0.5 truncate">{c.value}</div>
+                <div className="text-xs text-muted-foreground mt-1">{c.description}</div>
+              </div>
+              <ExternalLink className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
+            </motion.a>
           ))}
         </motion.div>
       </div>
