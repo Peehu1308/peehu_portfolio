@@ -41,6 +41,17 @@ const jobs = [
       "Authored technical write-ups, literature reviews and reproducible research notebooks.",
     ],
   },
+  {
+    role: "Research Intern",
+    company: "Independent Research",
+    location: "Remote",
+    period: "Summer 2024",
+    bullets: [
+      "Conducted research on data-driven cybercrime awareness & mitigation, contributing to a Springer-published paper (DACS 2024, IIM Bodh Gaya).",
+      "Worked on AI/ML experimentation, dataset analysis and model evaluation.",
+      "Authored technical write-ups, literature reviews and reproducible research notebooks.",
+    ],
+  },
 ];
 
 export function Experience() {

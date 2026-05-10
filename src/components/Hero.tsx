@@ -95,6 +95,14 @@ export function Hero() {
           >
             <Mail className="h-4 w-4" /> Contact Me
           </a>
+          <a
+            href="https://drive.google.com/file/d/1mGCga7versokU7SPSi7nCIwNQuLMxuGD/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold neon-border glow-hover"
+          >
+            View Resume
+          </a>
         </motion.div>
 
         <motion.div

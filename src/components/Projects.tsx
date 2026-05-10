@@ -2,6 +2,10 @@ import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from
 import { ArrowUpRight, ExternalLink, Github } from "lucide-react";
 import { MouseEvent, useState } from "react";
 import { Section } from "./Section";
+import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { Section } from "./Section";
+import { Github, ExternalLink, ArrowUpRight } from "lucide-react";
+import { MouseEvent, useState } from "react";
 
 type Category = "All" | "Web" | "Mobile" | "AI / ML" | "Open Source";
 
@@ -19,6 +23,56 @@ type Project = {
 const projects: Project[] = [
   
   
+  {
+    title: "Askca",
+    category: "Web",
+    stack: ["Next.js", "React", "Tailwind"],
+    description: "A modern web platform I designed and built end-to-end — clean UX, fast performance, and a polished modern aesthetic.",
+    bullets: [
+      "Designed responsive UI with smooth motion",
+      "Optimized for performance & SEO",
+      "Component-driven architecture",
+    ],
+    demo: "https://askca.vercel.app",
+    gradient: "from-fuchsia-500/30 to-violet-700/30",
+  },
+  {
+    title: "Realtime Chat App",
+    category: "Web",
+    stack: ["React", "Node.js", "Socket.IO", "Express"],
+    description: "Full-stack realtime messaging app powered by Socket.IO with rooms, typing indicators and live presence.",
+    bullets: [
+      "Bidirectional Socket.IO events with rooms & presence",
+      "Express + Node backend with REST + WebSockets",
+      "Optimistic UI, typing indicators & message history",
+    ],
+    github: "https://github.com/Peehu1308",
+    gradient: "from-violet-500/30 to-indigo-700/30",
+  },
+  {
+    title: "3D Web Experiences",
+    category: "Web",
+    stack: ["Three.js", "WebGL", "JavaScript"],
+    description: "Interactive 3D web experiments and immersive browser-based visual experiences.",
+    bullets: [
+      "Advanced Three.js scenes with dynamic lighting",
+      "Immersive visuals inspired by creative studios",
+      "Performance-optimized & responsive rendering",
+    ],
+    gradient: "from-indigo-500/30 to-fuchsia-700/30",
+  },
+  {
+    title: "Cultural Education Platform",
+    category: "Web",
+    stack: ["Web", "Interactive Learning", "UI/UX"],
+    description: "Immersive platform blending storytelling, mythology, maps and cultural exploration.",
+    bullets: [
+      "Visually rich interactive learning experiences",
+      "Cultural storytelling & heritage content",
+      "Engagement, accessibility & modern UX",
+    ],
+    gradient: "from-rose-500/30 to-violet-700/30",
+  },
   {
     title: "Pixel",
     category: "Mobile",
