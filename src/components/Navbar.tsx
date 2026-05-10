@@ -8,9 +8,11 @@ const links = [
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
   { href: "#education", label: "Education" },
-  { href: "#achievements", label: "Awards" },
+  { href: "#achievements", label: "Achievements" },
   { href: "#contact", label: "Contact" },
 ];
+
+const RESUME_URL = "https://drive.google.com/file/d/1mGCga7versokU7SPSi7nCIwNQuLMxuGD/view?usp=sharing";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -41,12 +43,22 @@ export function Navbar() {
             </a>
           ))}
         </nav>
-        <a
-          href="#contact"
-          className="hidden rounded-full bg-gradient-to-r from-primary to-accent px-4 py-2 text-sm font-medium text-primary-foreground glow-hover md:inline-flex"
-        >
-          Let's talk
-        </a>
+        <div className="hidden items-center gap-2 md:flex">
+          <a
+            href={RESUME_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-full glass px-4 py-2 text-sm font-medium neon-border glow-hover"
+          >
+            Resume
+          </a>
+          <a
+            href="#contact"
+            className="rounded-full bg-gradient-to-r from-primary to-accent px-4 py-2 text-sm font-medium text-primary-foreground glow-hover"
+          >
+            Let's talk
+          </a>
+        </div>
         <button
           aria-label="Menu"
           onClick={() => setOpen(!open)}
