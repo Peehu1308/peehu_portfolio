@@ -2,10 +2,6 @@ import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from
 import { ArrowUpRight, ExternalLink, Github } from "lucide-react";
 import { MouseEvent, useState } from "react";
 import { Section } from "./Section";
-import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { Section } from "./Section";
-import { Github, ExternalLink, ArrowUpRight } from "lucide-react";
-import { MouseEvent, useState } from "react";
 
 type Category = "All" | "Web" | "Mobile" | "AI / ML" | "Open Source";
 
@@ -175,7 +171,45 @@ const projects: Project[] = [
     ],
     gradient: "from-rose-500/30 to-violet-700/30",
   },
-  
+  {
+    title: "Sphere",
+    category: "Mobile",
+    stack: ["Flutter", "Dart", "Supabase", "AWS S3"],
+    description: "Creative-first social platform for independent artists combining music discovery, mood boards, and long-form writing.",
+    bullets: [
+      "Independent music streaming with mood & genre discovery",
+      "Visual mood board creation for emotional expression",
+      "Distraction-free blog writing & reading ecosystem",
+    ],
+    github: "https://github.com/Peehu1308/Sphere_Updated",
+    gradient: "from-cyan-500/30 to-blue-700/30",
+  },
+  {
+    title: "VAE_GAT_on_highD",
+    category: "AI / ML",
+    stack: ["Python", "Deep Learning", "GNN"],
+    description: "Hybrid VAE + Graph Attention Network on the highD dataset for autonomous driving behavior.",
+    bullets: [
+      "Modeled vehicle interactions as dynamic graphs",
+      "Spatial-temporal attention for trajectory understanding",
+      "Optimized loss design & robust evaluation",
+    ],
+    github: "https://github.com/Peehu1308/VAE_GAT_on_highd",
+    gradient: "from-violet-500/30 to-indigo-700/30",
+  },
+  {
+    title: "AI Brain Tumor Detection",
+    category: "AI / ML",
+    stack: ["Python", "ML", "MRI Analysis"],
+    description: "AI-powered healthcare research project for detecting brain tumors from MRI scans.",
+    bullets: [
+      "Trained ML models on MRI datasets",
+      "Focused on early-stage tumor detection",
+      "Robust preprocessing & classification pipelines",
+    ],
+    github: "https://github.com/Peehu1308/Cancer-Detection-CNN-",
+    gradient: "from-purple-500/30 to-pink-600/30",
+  },
   {
     title: "Open Source & Research Work",
     category: "Open Source",
