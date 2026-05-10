@@ -17,59 +17,7 @@ type Project = {
 };
 
 const projects: Project[] = [
-  
-  
-  {
-    title: "Askca",
-    category: "Web",
-    stack: ["Next.js", "React", "Tailwind"],
-    description: "A modern web platform I designed and built end-to-end — clean UX, fast performance, and a polished modern aesthetic.",
-    bullets: [
-      "Designed responsive UI with smooth motion",
-      "Optimized for performance & SEO",
-      "Component-driven architecture",
-    ],
-    demo: "https://askca.vercel.app",
-    gradient: "from-fuchsia-500/30 to-violet-700/30",
-  },
-  {
-    title: "Realtime Chat App",
-    category: "Web",
-    stack: ["React", "Node.js", "Socket.IO", "Express"],
-    description: "Full-stack realtime messaging app powered by Socket.IO with rooms, typing indicators and live presence.",
-    bullets: [
-      "Bidirectional Socket.IO events with rooms & presence",
-      "Express + Node backend with REST + WebSockets",
-      "Optimistic UI, typing indicators & message history",
-    ],
-    github: "https://github.com/Peehu1308",
-    gradient: "from-violet-500/30 to-indigo-700/30",
-  },
-  {
-    title: "3D Web Experiences",
-    category: "Web",
-    stack: ["Three.js", "WebGL", "JavaScript"],
-    description: "Interactive 3D web experiments and immersive browser-based visual experiences.",
-    bullets: [
-      "Advanced Three.js scenes with dynamic lighting",
-      "Immersive visuals inspired by creative studios",
-      "Performance-optimized & responsive rendering",
-    ],
-    gradient: "from-indigo-500/30 to-fuchsia-700/30",
-  },
-  {
-    title: "Cultural Education Platform",
-    category: "Web",
-    stack: ["Web", "Interactive Learning", "UI/UX"],
-    description: "Immersive platform blending storytelling, mythology, maps and cultural exploration.",
-    bullets: [
-      "Visually rich interactive learning experiences",
-      "Cultural storytelling & heritage content",
-      "Engagement, accessibility & modern UX",
-    ],
-    gradient: "from-rose-500/30 to-violet-700/30",
-  },
-  {
+   {
     title: "Pixel",
     category: "Mobile",
     stack: ["Flutter", "Dart", "Supabase"],
@@ -81,19 +29,6 @@ const projects: Project[] = [
     ],
     github: "https://github.com/Peehu1308/Pixel",
     gradient: "from-fuchsia-500/30 to-violet-700/30",
-  },
-  {
-    title: "VAE_GAT_on_highD",
-    category: "AI / ML",
-    stack: ["Python", "Deep Learning", "GNN"],
-    description: "Hybrid VAE + Graph Attention Network on the highD dataset for autonomous driving behavior.",
-    bullets: [
-      "Modeled vehicle interactions as dynamic graphs",
-      "Spatial-temporal attention for trajectory understanding",
-      "Optimized loss design & robust evaluation",
-    ],
-    github: "https://github.com/Peehu1308/VAE_GAT_on_highd",
-    gradient: "from-violet-500/30 to-indigo-700/30",
   },
   {
     title: "Askca",
@@ -109,32 +44,6 @@ const projects: Project[] = [
     gradient: "from-fuchsia-500/30 to-violet-700/30",
   },
   {
-    title: "Sphere",
-    category: "Mobile",
-    stack: ["Flutter", "Dart", "Supabase", "AWS S3"],
-    description: "Creative-first social platform for independent artists combining music discovery, mood boards, and long-form writing.",
-    bullets: [
-      "Independent music streaming with mood & genre discovery",
-      "Visual mood board creation for emotional expression",
-      "Distraction-free blog writing & reading ecosystem",
-    ],
-    github: "https://github.com/Peehu1308/Sphere_Updated",
-    gradient: "from-cyan-500/30 to-blue-700/30",
-  },
-  {
-    title: "AI Brain Tumor Detection",
-    category: "AI / ML",
-    stack: ["Python", "ML", "MRI Analysis"],
-    description: "AI-powered healthcare research project for detecting brain tumors from MRI scans.",
-    bullets: [
-      "Trained ML models on MRI datasets",
-      "Focused on early-stage tumor detection",
-      "Robust preprocessing & classification pipelines",
-    ],
-    github: "https://github.com/Peehu1308/Cancer-Detection-CNN-",
-    gradient: "from-purple-500/30 to-pink-600/30",
-  },
-  {
     title: "Realtime Chat App",
     category: "Web",
     stack: ["React", "Node.js", "Socket.IO", "Express"],
@@ -146,6 +55,19 @@ const projects: Project[] = [
     ],
     github: "https://github.com/Peehu1308/Chat-Application-v1",
     gradient: "from-violet-500/30 to-indigo-700/30",
+  },
+   {
+    title: "Sphere",
+    category: "Mobile",
+    stack: ["Flutter", "Dart", "Supabase", "AWS S3"],
+    description: "Creative-first social platform for independent artists combining music discovery, mood boards, and long-form writing.",
+    bullets: [
+      "Independent music streaming with mood & genre discovery",
+      "Visual mood board creation for emotional expression",
+      "Distraction-free blog writing & reading ecosystem",
+    ],
+    github: "https://github.com/Peehu1308/Sphere_Updated",
+    gradient: "from-cyan-500/30 to-blue-700/30",
   },
   {
     title: "3D Web Experiences",
@@ -171,19 +93,8 @@ const projects: Project[] = [
     ],
     gradient: "from-rose-500/30 to-violet-700/30",
   },
-  {
-    title: "Sphere",
-    category: "Mobile",
-    stack: ["Flutter", "Dart", "Supabase", "AWS S3"],
-    description: "Creative-first social platform for independent artists combining music discovery, mood boards, and long-form writing.",
-    bullets: [
-      "Independent music streaming with mood & genre discovery",
-      "Visual mood board creation for emotional expression",
-      "Distraction-free blog writing & reading ecosystem",
-    ],
-    github: "https://github.com/Peehu1308/Sphere_Updated",
-    gradient: "from-cyan-500/30 to-blue-700/30",
-  },
+ 
+ 
   {
     title: "VAE_GAT_on_highD",
     category: "AI / ML",
