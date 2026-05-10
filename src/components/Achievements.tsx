@@ -39,6 +39,12 @@ const highlights = [
     sub: "Merit-based Scholarship",
     text: "Awarded the SHIFI scholarship for academic excellence and consistent performance.",
   },
+  {
+    icon: Award,
+    title: "CSA Certified",
+    sub: "Certified Security Associate",
+    text: "Certified in core security principles, secure development practices and threat awareness.",
+  },
 ];
 
 const more = [
